@@ -8,7 +8,7 @@
 > ⚡ Runs locally, no internet required, safe and reliable!
 ---
 
-## 📷 截图
+## 📷 Screenshot
 
 ![Screenshot of the app](./preview/Snipaste_2025-04-08_15-43-39.png)
 
