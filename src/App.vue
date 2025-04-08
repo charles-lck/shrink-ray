@@ -27,4 +27,5 @@ watch(() => appStore.themeMode, (newValue: string) => {
   themeMode.value = newValue === 'light' ? null : darkTheme
 })
 locale.value = appStore.language;
+themeMode.value = appStore.themeMode === 'light' ? null : darkTheme
 </script>

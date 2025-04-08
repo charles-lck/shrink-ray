@@ -19,7 +19,7 @@
         "transparent": false,
         "resizable": false,
         "alwaysOnTop": false,
-        "devtools": true,
+        "devtools": false,
         "hiddenTitle": false,
         "decorations": true,
         "acceptFirstMouse": true

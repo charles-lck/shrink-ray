@@ -1,3 +1,8 @@
+#![cfg_attr(
+    all(not(debug_assertions), target_os = "windows"),
+    windows_subsystem = "windows"
+)]
+
 use dirs::cache_dir;
 use image::ImageOutputFormat;
 use imagequant::Attributes;
@@ -29,7 +34,7 @@ async fn compress_image(
     let input_path = PathBuf::from(&path);
     let app_name = app.package_info().name.clone();
     // 打印app_id
-    println!("App app_name: {}", app_name);
+    // println!("App app_name: {}", app_name);
     let cache_dir = cache_dir().ok_or("无法获取系统缓存目录")?;
 
     let temp_dir = cache_dir.join(format!("com.{}.app/temp", app_name));

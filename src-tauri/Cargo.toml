@@ -35,3 +35,6 @@ rayon = "1.10"
 
 [profile.dev.package.objc2]
 debug-assertions = false
+
+[target.'cfg(windows)'.build]
+rustflags = ["-C", "link-args=/SUBSYSTEM:WINDOWS"]

@@ -4,7 +4,7 @@ export const useAppStore = defineStore('app', {
   state: () => ({
     lossless: true,
     replace: false,
-    language: 'zh',
+    language: 'en',
     themeMode: 'light'
   }),
   actions: {
