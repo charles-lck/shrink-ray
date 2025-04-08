@@ -1,0 +1,18 @@
+{
+  "welcome": "Bienvenido a Rayo Reductor de Imágenes",
+  "compressMode": "Modo de compresión",
+  "replace": "Reemplazar",
+  "dropText": "Arrastra y suelta hasta <b>30</b> imágenes aquí",
+  "dropHint": "Soporta formatos PNG, JPG, JPEG",
+  "progress": "Progreso",
+  "download": "Descargar",
+  "zipDownload": "Descargar como ZIP",
+  "lossless": "Sin pérdida",
+  "lossy": "Con pérdida",
+  "theme.toggleToDark": "Cambiar a modo oscuro",
+  "theme.toggleToLight": "Cambiar a modo claro",
+  "taskStatus.waiting": "En espera",
+  "taskStatus.compressing": "Comprimiendo",
+  "taskStatus.completed": "Completado",
+  "taskStatus.failed": "Fallido"
+}

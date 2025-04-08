@@ -1,0 +1,18 @@
+{
+  "welcome": "Bienvenue sur Rayon Réducteur d'Images",
+  "compressMode": "Mode de compression",
+  "replace": "Remplacer",
+  "dropText": "Glissez-déposez jusqu'à <b>30</b> images ici",
+  "dropHint": "Supporte les formats PNG, JPG, JPEG",
+  "progress": "Progression",
+  "download": "Télécharger",
+  "zipDownload": "Télécharger en ZIP",
+  "lossless": "Sans perte",
+  "lossy": "Avec perte",
+  "theme.toggleToDark": "Passer en mode sombre",
+  "theme.toggleToLight": "Passer en mode clair",
+  "taskStatus.waiting": "En attente",
+  "taskStatus.compressing": "Compression en cours",
+  "taskStatus.completed": "Terminé",
+  "taskStatus.failed": "Échoué"
+}

@@ -1,0 +1,18 @@
+{
+  "welcome": "이미지 축소 레이에 오신 것을 환영합니다",
+  "compressMode": "압축 모드",
+  "replace": "교체",
+  "dropText": "최대 <b>30</b>장의 이미지를 여기에 드래그 앤 드롭하세요",
+  "dropHint": "PNG, JPG, JPEG 형식을 지원합니다",
+  "progress": "진행률",
+  "download": "다운로드",
+  "zipDownload": "ZIP으로 묶어서 다운로드",
+  "lossless": "무손실",
+  "lossy": "유손실",
+  "theme.toggleToDark": "다크 모드로 전환",
+  "theme.toggleToLight": "라이트 모드로 전환",
+  "taskStatus.waiting": "대기 중",
+  "taskStatus.compressing": "압축 중",
+  "taskStatus.completed": "완료",
+  "taskStatus.failed": "실패"
+}

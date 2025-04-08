@@ -1,0 +1,18 @@
+{
+  "welcome": "画像縮小レイへようこそ",
+  "compressMode": "圧縮モード",
+  "replace": "置換",
+  "dropText": "最大 <b>30</b> 枚の画像をここにドラッグ＆ドロップ",
+  "dropHint": "PNG、JPG、JPEG形式をサポート",
+  "progress": "進捗",
+  "download": "ダウンロード",
+  "zipDownload": "ZIPとしてまとめてダウンロード",
+  "lossless": "無損失",
+  "lossy": "有損失",
+  "theme.toggleToDark": "ダークモードに切り替え",
+  "theme.toggleToLight": "ライトモードに切り替え",
+  "taskStatus.waiting": "待機中",
+  "taskStatus.compressing": "圧縮中",
+  "taskStatus.completed": "完了",
+  "taskStatus.failed": "失敗"
+}

@@ -1,0 +1,18 @@
+{
+  "welcome": "Welcome to Image Shrink Ray",
+  "compressMode": "Mode",
+  "replace": "Replace",
+  "dropText": "Drag and drop up to <b>30</b> images here",
+  "dropHint": "Supports PNG, JPG, JPEG formats",
+  "progress": "Progress",
+  "download": "Download",
+  "zipDownload": "Download as ZIP",
+  "lossless": "Lossless",
+  "lossy": "Lossy",
+  "theme.toggleToDark": "Dark Mode",
+  "theme.toggleToLight": "Light Mode",
+  "taskStatus.waiting": "Waiting",
+  "taskStatus.compressing": "Compressing",
+  "taskStatus.completed": "Completed",
+  "taskStatus.failed": "Failed"
+}

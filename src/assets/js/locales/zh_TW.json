@@ -1,0 +1,18 @@
+{
+  "welcome": "歡迎使用圖片「微縮射線」",
+  "compressMode": "壓縮模式",
+  "replace": "替換",
+  "dropText": "拖放最多 <b>30</b> 張圖片到這裡",
+  "dropHint": "支援 PNG、JPG、JPEG 格式",
+  "progress": "進度",
+  "download": "下載",
+  "zipDownload": "打包 ZIP 下載",
+  "lossless": "無損",
+  "lossy": "有損",
+  "theme.toggleToDark": "切換到暗黑模式",
+  "theme.toggleToLight": "切換到明亮模式",
+  "taskStatus.waiting": "等待",
+  "taskStatus.compressing": "壓縮中",
+  "taskStatus.completed": "完成",
+  "taskStatus.failed": "失敗"
+}
