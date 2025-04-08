@@ -6,6 +6,11 @@
 **ShrinkRay** is a local image compression tool built with **Tauri 2.0**, offering fast, secure, and efficient compression. It supports **PNG (lossless and lossy)** as well as **JPEG** formats. It can process up to **5 images concurrently** (each up to **20MB** in size) and allows packaging the compressed results into a **ZIP file**. **All processing is done locally, ensuring privacy and security.**
 
 > ⚡ Runs locally, no internet required, safe and reliable!
+---
+
+## 📷 截图
+
+![Screenshot of the app](./preview/Snipaste_2025-04-08_15-43-39.png)
 
 ---
 
@@ -23,7 +28,7 @@
 
 ## 📦 Installation
 
-Visit the [releases page](https://github.com/charles-lck/shrinkray/releases) to download the installation package for your system. Extract and run it directly.
+Visit the [releases page](https://github.com/charles-lck/shrink-ray/releases) to download the installation package for your system. Extract and run it directly.
 
 > 🛠️ This tool is built with [Tauri 2.0](https://v2.tauri.app/). Development requires setting up a Tauri runtime environment.
 
