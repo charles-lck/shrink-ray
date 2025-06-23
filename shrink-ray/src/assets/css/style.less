@@ -1,0 +1,354 @@
+// 明亮模式变量（活泼配色）
+@primary-color: #00c4b4; // 青色（主色调，用于进度条和主题切换按钮）
+@success-color: #ff6f61; // 珊瑚红（用于下载按钮）
+@secondary-color: #ff85a2; // 粉色（用于打包按钮）
+@text-color: #2d3748; // 深灰色（主要文字颜色）
+@text-light: #718096; // 中灰色（次要文字颜色）
+@border-color: #a0aec0; // 浅灰色（边框颜色）
+@background-color: #fffaf0; // 浅黄色（背景颜色，温暖感）
+@card-background: #ffffff; // 白色（卡片背景）
+@task-background: #fefcbf; // 浅橙色（任务卡片背景）
+@progress-bg: #e2e8f0; // 浅灰色（进度条背景）
+
+// 暗黑模式变量（活泼配色）
+@dark-primary-color: #26de81; // 亮青色（暗黑模式下的主色调）
+@dark-success-color: #ff8782; // 稍亮的珊瑚红（暗黑模式下的下载按钮）
+@dark-secondary-color: #ff9ff3; // 稍亮的粉色（暗黑模式下的打包按钮）
+@dark-text-color: #e2e8f0; // 浅灰色（暗黑模式下的主要文字颜色）
+@dark-text-light: #a0aec0; // 中灰色（暗黑模式下的次要文字颜色）
+@dark-border-color: #718096; // 深灰色（暗黑模式下的边框颜色）
+@dark-background-color: #2d3748; // 深蓝色（暗黑模式下的背景颜色）
+@dark-card-background: #4a5568; // 深灰色（暗黑模式下的卡片背景）
+@dark-task-background: #718096; // 中灰色（暗黑模式下的任务卡片背景）
+@dark-progress-bg: #a0aec0; // 中灰色（暗黑模式下的进度条背景）
+
+// 全局样式
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+// 应用容器
+.app-container {
+  min-height: 100vh;
+  background-color: @background-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+
+  &.dark-theme {
+    background-color: @dark-background-color;
+  }
+}
+
+// 主卡片
+.main-card {
+  background-color: @card-background;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 32px;
+  width: 100%;
+  max-width: 640px;
+  transition: background-color 0.3s ease;
+  margin-bottom: 40px;
+
+  .dark-theme & {
+    background-color: @dark-card-background;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+}
+
+// 主题切换按钮
+.theme-toggle {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 16px;
+  position: absolute;
+  right: 16px;
+  top: 16px;
+
+  .lang-btn{
+    width: 120px;
+  }
+}
+
+.theme-btn {
+  padding: 8px 16px;
+  background-color: @primary-color;
+  color: #ffffff;
+  border: none;
+  width: 150px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-right: 15px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken(@primary-color, 10%);
+  }
+
+  .dark-theme & {
+    background-color: @dark-primary-color;
+
+    &:hover {
+      background-color: darken(@dark-primary-color, 10%);
+    }
+  }
+}
+
+// 标题
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  color: @text-color;
+  text-align: center;
+  margin-bottom: 32px;
+  transition: color 0.3s ease;
+  margin-top: 80px;
+
+  .dark-theme & {
+    color: @dark-text-color;
+  }
+}
+
+// 选项容器
+.options-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.option-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.option-label {
+  font-size: 16px;
+  color: @text-color;
+  font-weight: 500;
+  transition: color 0.3s ease;
+
+  .dark-theme & {
+    color: @dark-text-color;
+  }
+}
+
+.checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  accent-color: @primary-color;
+  cursor: pointer;
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
+  .dark-theme & {
+    accent-color: @dark-primary-color;
+  }
+}
+
+.checkbox-text {
+  font-size: 14px;
+  color: @text-light;
+  transition: color 0.3s ease;
+
+  .dark-theme & {
+    color: @dark-text-light;
+  }
+}
+
+// 拖放区域
+.drop-area {
+  border: 2px dashed @border-color;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  margin-bottom: 32px;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+
+  &:hover {
+    border-color: @primary-color;
+  }
+
+  .dark-theme & {
+    border-color: @dark-border-color;
+
+    &:hover {
+      border-color: @dark-primary-color;
+    }
+  }
+}
+
+.drop-text {
+  font-size: 16px;
+  color: @text-light;
+  margin: 0;
+  transition: color 0.3s ease;
+
+  .dark-theme & {
+    color: @dark-text-light;
+  }
+}
+
+.drop-hint {
+  font-size: 12px;
+  color: @text-light;
+  margin-top: 8px;
+  margin-bottom: 0px;
+  transition: color 0.3s ease;
+
+  .dark-theme & {
+    color: @dark-text-light;
+  }
+}
+
+// 任务列表
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.task-item {
+  background-color: @task-background;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease;
+
+  .dark-theme & {
+    background-color: @dark-task-background;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.task-name {
+  font-size: 16px;
+  color: @text-color;
+  font-weight: 500;
+  margin: 0;
+  transition: color 0.3s ease;
+
+  .dark-theme & {
+    color: @dark-text-color;
+  }
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: @progress-bg;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+
+  .dark-theme & {
+    background-color: @dark-progress-bg;
+  }
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: @primary-color;
+  transition: width 0.3s ease, background-color 0.3s ease;
+
+  .dark-theme & {
+    background-color: @dark-primary-color;
+  }
+}
+
+.progress-text {
+  font-size: 12px;
+  color: @text-light;
+  margin-top: 8px;
+  transition: color 0.3s ease;
+
+  .dark-theme & {
+    color: @dark-text-light;
+  }
+}
+
+// 按钮样式
+.download-btn {
+  padding: 6px 12px;
+  background-color: @success-color;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken(@success-color, 10%);
+  }
+
+  .dark-theme & {
+    background-color: @dark-success-color;
+
+    &:hover {
+      background-color: darken(@dark-success-color, 10%);
+    }
+  }
+}
+
+.zip-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: @secondary-color;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 16px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken(@secondary-color, 10%);
+  }
+
+  .dark-theme & {
+    background-color: @dark-secondary-color;
+
+    &:hover {
+      background-color: darken(@dark-secondary-color, 10%);
+    }
+  }
+}
+
+.progress-fill {
+  background: linear-gradient(90deg, @primary-color, lighten(@primary-color, 20%));
+}
+
+.drop-area:hover {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% { border-color: @primary-color; }
+  50% { border-color: lighten(@primary-color, 20%); }
+  100% { border-color: @primary-color; }
+}
